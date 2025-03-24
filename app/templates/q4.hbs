@@ -1,0 +1,5 @@
+<h2>Product Discount Calculator</h2>
+<label>Original Price:</label>
+<input type="number" value={{this.product.originalPrice}} oninput={{action "updatePrice"}}>
+<p>Discounted Price: {{this.product.discountedPrice}}</p>
+{{outlet}}

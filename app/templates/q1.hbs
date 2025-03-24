@@ -1,0 +1,9 @@
+<h2>Enter Your Name</h2>
+<label>First Name:</label>
+<input type="text" class="firstName" placeholder={{this.person.firstName}}>
+<label>Last Name:</label>
+<input type="text" class="lastName" placeholder={{this.person.lastName}}>
+<button {{action "updateName"}}>Update Name</button>
+<br>
+<p>Full Name is {{this.person.fullName}}</p>
+{{outlet}}

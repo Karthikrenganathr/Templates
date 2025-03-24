@@ -1,0 +1,13 @@
+<h2>College Student List</h2>
+<ul>
+  {{#each this.clgStudents.sortedStudents as |student|}}
+    <li>
+      {{student}}
+      <button {{action "removeStudent" student}}>Remove</button>
+    </li>
+  {{/each}}
+</ul>
+
+<input type="text" placeholder="Enter student name" class="addStudentName">
+<button {{action "addStudent"}}>Add Student</button>
+{{outlet}}
