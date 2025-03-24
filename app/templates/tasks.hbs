@@ -1,0 +1,16 @@
+<h2>Task List</h2>
+<TaskList @tasks={{this.model}} as |task|>
+  <li>
+    {{capitalize task.title}} - 
+    {{#let (if (eq task.status "pending") "⏳ Work in progress" "✅ Task finished") as |message|}}
+      {{message}}
+    {{/let}}
+    <button {{action "toggleStatus" task}}>Toggle Status</button>
+  </li>
+</TaskList>
+<h3>Incomplete Tasks</h3>
+<TaskList @tasks={{this.incompleteTasks}} as |task|>
+  <li>{{capitalize task.title}}</li>
+</TaskList>
+{{outlet}}
+

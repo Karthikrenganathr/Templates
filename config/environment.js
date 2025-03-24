@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'activity1',
+    modulePrefix: 'templates-component',
     environment,
     rootURL: '/',
     locationType: 'auto',
