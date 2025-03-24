@@ -1,0 +1,9 @@
+{{#if @tasks.length}}
+  <ul>
+    {{#each @tasks as |task|}}
+      {{yield task}}
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No tasks available</p>
+{{/if}}

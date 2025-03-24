@@ -1,0 +1,19 @@
+<h2>User Information</h2>
+<ul>
+  {{#each-in this.model as |key value|}}
+    {{#unless (eq key "_super")}} 
+      {{#if (eq key "address")}}
+        <li><strong>{{capitalize key}}</strong>:</li>
+        <ul>
+          {{#each-in value as |subKey subValue|}}
+            <li><strong>{{capitalize subKey}}</strong>: {{subValue}}</li>
+          {{/each-in}}
+        </ul>
+      {{else}}
+        <li><strong>{{capitalize key}}</strong>: {{value}}</li>
+      {{/if}}
+    {{/unless}}
+  {{/each-in}}
+</ul>
+
+
